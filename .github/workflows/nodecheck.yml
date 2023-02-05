@@ -1,9 +1,6 @@
-name: nodecheck
+name: Node.js CI
 
-on: [push]
-
-env:
-  NODE_ENV: test
+on: push
 
 jobs:
   build:
@@ -11,19 +8,18 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-
+      uses: actions/checkout@v3
+    
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: 16
-
+        
     - name: Install dependencies
       run: npm ci
-      
     - name: Lint code
       run: |
         npx eslint .
-
-    - name: Test Express application
+      
+    - name: Test the application
       run: npm test

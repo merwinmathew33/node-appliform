@@ -18,6 +18,7 @@ npm install nodemon
  ## EXTRA FEATURES 
 1. I have created docker file for node.js and mongoDB
 1. Also created docker compose file
+1. Created the whole project using git
 >NOTE: **As it is my first experience of writing a readme file,it is very difficult to explai everythin now.So i am stoppin here**
 
 ## THANKYOU

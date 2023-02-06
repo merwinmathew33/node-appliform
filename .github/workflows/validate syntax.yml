@@ -1,0 +1,13 @@
+name: Validate JavaScript Syntax
+on:
+  push:
+    paths:
+      - '**/*.js'
+jobs:
+  validate-syntax:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: eslint/action@v1
+      with:
+        eslint-config: .eslintrc.json
